@@ -100,7 +100,5 @@
     g="grim -g \"$(slurp)\" $(date +%m-%d-%Y_%T).png";
     
     ytogg="yt-dlp -x --audio-format vorbis --embed-metadata --embed-thumbnail";
-    
-    dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME";
   };
 }
