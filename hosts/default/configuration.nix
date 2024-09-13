@@ -104,6 +104,7 @@
     vim
     wget
     git
+    pulseaudio
   ];
 
   # List services that you want to enable:
