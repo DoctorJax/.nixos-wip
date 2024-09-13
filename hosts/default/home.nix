@@ -11,7 +11,7 @@
 
   imports = [
     # Modules
-    ../../modules/home/default.nix
+    ../../modules/home/terminal/default.nix
   ];
 
   home.sessionVariables = {
