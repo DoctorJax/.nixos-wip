@@ -9,6 +9,8 @@
     pkgs.ydotool
     pkgs.feh
     pkgs.swaybg
+    pkgs.mpd
+    pkgs.mpc-cli
   ];
 
   home.file.".scripts" = {
