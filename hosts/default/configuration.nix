@@ -8,7 +8,11 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      # Home Manager
       inputs.home-manager.nixosModules.default
+
+      # Modules
+      ../../modules/home/shell/default.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -90,11 +94,11 @@
       # TLDR: Don't change this unless you know what you're doing.
       home.stateVersion = "24.05";
     
-      imports = [
-        # Modules
-        ../../modules/home/shell/default.nix
-        ../../modules/home/gui/default.nix
-      ];
+     # imports = [
+     #   # Modules
+     #   ../../modules/home/shell/default.nix
+     #   #../../modules/home/gui/default.nix
+     # ];
     
       home.sessionVariables = {
         EDITOR = "vim";
@@ -102,7 +106,6 @@
     
       # Let Home Manager install and manage itself.
       programs.home-manager.enable = true;
-    };
     };
   };
 
