@@ -88,15 +88,16 @@
       # manage.
       home.username = "jackson";
       home.homeDirectory = "/home/jackson";
+      xdg.enable = true;
     
       # TLDR: Don't change this unless you know what you're doing.
       home.stateVersion = "24.05";
     
-     imports = [
-       # Modules
-       ../../modules/home/shell/default.nix
-       ../../modules/home/gui/default.nix
-     ];
+      imports = [
+        # Modules
+        ../../modules/home/shell/default.nix
+        #../../modules/home/gui/default.nix
+      ];
     
       home.sessionVariables = {
         EDITOR = "vim";
@@ -140,5 +141,4 @@
   # TLDR: Only change this if you wanna break shit unless you read the
   # documentation for it. Perfectly safe to leave it the original value.
   system.stateVersion = "24.05";
-
 }

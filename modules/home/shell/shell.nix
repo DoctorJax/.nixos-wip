@@ -1,4 +1,4 @@
-{config, lib, pkgs,...}:
+{config, lib, pkgs, inputs,...}:
 {
   home.packages = [
     pkgs.pfetch
