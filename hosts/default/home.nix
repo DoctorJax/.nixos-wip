@@ -12,6 +12,7 @@
   imports = [
     # Modules
     ../../modules/home/shell/default.nix
+    ../../modules/home/gui/default.nix
   ];
 
   home.sessionVariables = {
