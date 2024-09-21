@@ -10,6 +10,9 @@
       ./hardware-configuration.nix
       # Home Manager
       inputs.home-manager.nixosModules.default
+
+      # Modules
+      ../../modules/home/gui/default.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -96,7 +99,6 @@
       imports = [
         # Modules
         ../../modules/home/shell/default.nix
-        #../../modules/home/gui/default.nix
       ];
     
       home.sessionVariables = {

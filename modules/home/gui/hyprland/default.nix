@@ -1,4 +1,4 @@
-{config, pkgs, lib, ...}: {
+{config, pkgs, lib, inputs, ...}: {
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -9,10 +9,10 @@
   };
 
   hardware = {
-    opengl.enable = true;
+    graphics.enable = true;
   };
 
-  home.file.".config/hypr" = {
+  home-manager.users."jackson".home.file.".config/hypr" = {
     source = ./hypr;
     recursive = true;
   };
