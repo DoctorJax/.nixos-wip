@@ -4,7 +4,7 @@
     xwayland.enable = true;
   };
 
-  home.sessionVariables = {
+  environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
   };
 
