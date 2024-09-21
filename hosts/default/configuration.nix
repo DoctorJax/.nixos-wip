@@ -84,7 +84,7 @@
   }; 
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = { inherit inputs self; };
     users."jackson" = {
       # Home Manager needs a bit of information about you and the paths it should
       # manage.
