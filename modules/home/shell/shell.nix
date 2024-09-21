@@ -1,4 +1,4 @@
-{config, lib, pkgs, inputs,...}:
+{config, lib, pkgs, home,...}:
 {
   home.packages = [
     pkgs.pfetch
@@ -82,7 +82,6 @@
     l="ls -lFh";
     
     grep="grep --color";
-    wget="wget --hsts-file='${config.xdg.cacheHome}/wget_history'";
     
     rm="rm -i";
     cp="cp -i";

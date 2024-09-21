@@ -10,9 +10,6 @@
       ./hardware-configuration.nix
       # Home Manager
       inputs.home-manager.nixosModules.default
-
-      # Modules
-      ../../modules/home/shell/default.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -84,7 +81,8 @@
   }; 
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs self; };
+    extraSpecialArgs = { inherit inputs; };
+    useGlobalPkgs = true;
     users."jackson" = {
       # Home Manager needs a bit of information about you and the paths it should
       # manage.
@@ -94,11 +92,11 @@
       # TLDR: Don't change this unless you know what you're doing.
       home.stateVersion = "24.05";
     
-     # imports = [
-     #   # Modules
-     #   ../../modules/home/shell/default.nix
-     #   #../../modules/home/gui/default.nix
-     # ];
+     imports = [
+       # Modules
+       ../../modules/home/shell/default.nix
+       ../../modules/home/gui/default.nix
+     ];
     
       home.sessionVariables = {
         EDITOR = "vim";
