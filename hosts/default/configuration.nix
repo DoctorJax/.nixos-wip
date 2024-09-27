@@ -86,7 +86,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     useGlobalPkgs = true;
-    users."jackson" = {
+    users."jackson" = { ... }: {
       # Home Manager needs a bit of information about you and the paths it should
       # manage.
       home.username = "jackson";
@@ -130,15 +130,6 @@
     git
     pulseaudio
   ];
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
 
   # TLDR: Only change this if you wanna break shit unless you read the
   # documentation for it. Perfectly safe to leave it the original value.
