@@ -13,6 +13,7 @@
 
       # Modules
       ../../modules/home/gui/default.nix
+      ../../modules/home/shell/default.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -95,11 +96,6 @@
     
       # TLDR: Don't change this unless you know what you're doing.
       home.stateVersion = "24.05";
-    
-      imports = [
-        # Modules
-        ../../modules/home/shell/default.nix
-      ];
     
       home.sessionVariables = {
         EDITOR = "vim";
